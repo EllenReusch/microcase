@@ -5,7 +5,7 @@ import Image from "astro/components/Image.astro";
 import danceMotherFuckerDance from '../assets/images/dance-motherfucker-dance.jpg';
 const nyheder = await Astro.glob('./nyheder/*.md');
 const sorteredenyheder = nyheder.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
-const udvalgtenyheder = sorteredenyheder.slice(0, 4);
+const udvalgtenyheder = sorteredenyheder.slice(0, 5);
 ---
 <MainLayout title="Titel">
 	<article class="relative mb-16">

@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/NyhedsLayout.astro
-title: "Ny Nyhed"
+title: "Glemmekassen Tømmes: Find Dit Tabte Eje!"
 dato: "2024-04-22"
 coverimage: "/nytbillede.jpg"
 coveralt: "Nyt Billede"
-kortversion: "Tekst"
+kortversion: "Den 15. maj er dagen, hvor Danseskolen vil tømme glemmekassen, og du har en sidste chance for at genforenes med dine tabte ejendele."
 ---
 
 ## Glemmekassen Tømmes: Find Dit Tabte Eje!
