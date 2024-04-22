@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
 }
 
-@layer components{
+@layer components {
+  .nyhedslayout h2,
+  h3,
+  h4 {
+    @apply text-xl underline;
+  }
 }
