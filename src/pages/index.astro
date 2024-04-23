@@ -42,41 +42,48 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 5);
 			<h2 class="my-8 text-4xl text-persianmosaic-500">Dansehold Efterår 2024</h2>
 			<!-- alt hvad der omhandler cards til dansehold -->
 			<section class="">
-				<template x-for="dansehold in alledansehold" :key="dansehold.id">	
-					<article class="">
-						<a href="#">
-							<header class="">
-								<img :src="dansehold.holdbillede" :alt="dansehold.hodlbilledealt" class="">
-								<div class="" x-show="">Nyt hold!</div>
-								<div class="" x-show="dansehold.rabat"><span x-text="dansehold.rabatsats"></span> rabat!</div>
-								<div class="" x-show="(dansehold.pladserpaaholdet - dansehold.antaldeltagere) < 5">Kun få pladser tilbage!</div>
-							</header>
-							<section class="">
-								<h3 class="" x-text="dansehold.holdnavn"></h3>
-								<div class="">
-									<div class="venstre">
-										<div><span>Tid: </span><span x-text="dansehold.tidspunkt"></span></div>
-										<div><span>Alder: </span><span x-text="dansehold.alder"></span></div>
-										<div><span>Niveau: </span><span x-text="dansehold.niveau"></span></div>
-									</div>
-									<div class="hoejre">
-										<div><span>Deltagere: </span><span x-text="dansehold.pladserpaaholdet"></span></div>
-										<div><span>Lokale: </span><span x-text="dansehold.lokale"></span></div>
-									</div>
-								</div>
-								<p class="" x-text="dansehold.holdbeskrivelse"></p>	
-							</section>
-							<hr />
-							<section class="">
-								<div class=""><img :src="dansehold.underviserfoto" :alt="dansehold.underviserfotoalt" class=""></div>
-								<div class="">
-									<p class="">Underviser: <span href="#" x-text=""></span></p>
-									<p x-text="dansehold.underviserinfo"></p>
-								</div>
-							</section>
-						</a>
-					</article>
-				</template>
+				<template x-for="dansehold in alledansehold" :key="dansehold.id">
+    <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 px-4 mb-8">
+            <article class="border border-gray-200 rounded-lg overflow-hidden">
+                <a href="#" class="block">
+                    <header class="relative">
+                        <img :src="dansehold.holdbillede" :alt="dansehold.hodlbilledealt" class="w-full h-auto">
+                        <div class="absolute top-0 right-0 bg-blue-500 text-white px-2 py-1 text-xs font-bold" x-show="">Nyt hold!</div>
+                        <div class="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 text-xs font-bold" x-show="dansehold.rabat"><span x-text="dansehold.rabatsats"></span> rabat!</div>
+                        <div class="absolute bottom-0 right-0 bg-red-500 text-white px-2 py-1 text-xs font-bold" x-show="(dansehold.pladserpaaholdet - dansehold.antaldeltagere) < 5">Kun få pladser tilbage!</div>
+                    </header>
+                    <section class="p-4">
+                        <h3 class="text-xl font-semibold mb-2" x-text="dansehold.holdnavn"></h3>
+                        <div class="flex justify-between mb-2">
+                            <div>
+                                <div><span class="font-semibold">Tid:</span> <span x-text="dansehold.tidspunkt"></span></div>
+                                <div><span class="font-semibold">Alder:</span> <span x-text="dansehold.alder"></span></div>
+                                <div><span class="font-semibold">Niveau:</span> <span x-text="dansehold.niveau"></span></div>
+                            </div>
+                            <div>
+                                <div><span class="font-semibold">Deltagere:</span> <span x-text="dansehold.pladserpaaholdet"></span></div>
+                                <div><span class="font-semibold">Lokale:</span> <span x-text="dansehold.lokale"></span></div>
+                            </div>
+                        </div>
+                        <p class="text-sm" x-text="dansehold.holdbeskrivelse"></p>
+                    </section>
+                    <hr class="border-t border-gray-200">
+                    <section class="p-4 flex items-center">
+                        <div class="mr-4">
+                            <img :src="dansehold.underviserfoto" :alt="dansehold.underviserfotoalt" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold">Underviser: <span href="#" x-text=""></span></p>
+                            <p class="text-sm" x-text="dansehold.underviserinfo"></p>
+                        </div>
+                    </section>
+                </a>
+            </article>
+        </div>
+    </div>
+</template>
+
 			</section>
 			<!-- slut på alt hvad der omhandler cards til dansehold -->
 		</section>

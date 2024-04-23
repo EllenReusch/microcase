@@ -11,4 +11,11 @@
   h4 {
     @apply text-xl underline;
   }
+  .nyhedslayout h1 {
+    @apply text-persianmosaic-500;
+  }
+
+  .nyhedslayout img {
+    @apply rounded-xl;
+  }
 }
